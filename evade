@@ -5,7 +5,7 @@ local GuiService = game:GetService("GuiService")
 local Light = game:GetService("Lighting")
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 OrionLib:MakeNotification({
-    Name = "Dragon Hub [Evade]",
+    Name = "R1_Z1 X Dragon [Evade]",
     Content = "Dragon Hub is Loading.",
     Image = "rbxassetid://4483345998",
     Time = 15
@@ -234,11 +234,11 @@ MainTab:AddToggle({
 
 --sliders
 local MainTab3 = MainTab:AddSection({
-	Name = "Sliders"
+	Name = "Local"
 })
 
 local Misctab5 = MiscTab:AddSection({
-	Name = "Sliders"
+	Name = "Local"
 })
 
 local TargetWalkspeed
@@ -886,7 +886,6 @@ old = hookmetamethod(game,"__namecall",newcclosure(function(self,...)
     local method = getnamecallmethod()
     if tostring(self) == 'Communicator' and method == "InvokeServer" and Args[1] == "update" then
         return Settings.Speed, Settings.Jump 
-	
     end
     return old(self,...)
 end))

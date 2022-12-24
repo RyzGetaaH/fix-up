@@ -206,11 +206,7 @@ local FunTab= Window:MakeTab({
 	PremiumOnly = false
 })
 
-local CreditsTab = Window:MakeTab({
-	Name = "Credits",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = true
-})
+
 
 local MiscTab3 = MainTab:AddSection({
 	Name = "Auto Farms"
@@ -833,10 +829,17 @@ ESPTab:AddColorpicker({
 
 --credits
 
-CreditsTab:AddParagraph("Owner/Main Dev","R1_Z1")
-CreditsTab:AddParagraph("Credits","Dragon Dupe For Ui Name")
-CreditsTab:AddParagraph("Credits","Anti Fucker For WalkSpeed Script")
-CreditsTab:AddParagraph("Credits","JOIN DC FOR NOW")
+local CreditsTab= Window:MakeTab({
+	Name = "Credits",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+CreditsTab:AddParagraph("R1_Z1","For creating this script.")
+CreditsTab:AddParagraph("Dragon Dupe","Owner")
+CreditsTab:AddButton({Name="Copy Youtube Channel",Callback=function()setclipboard("https://www.youtube.com/@DragonDupe/featured")end})
+CreditsTab:AddButton({Name="Copy Discord",Callback=function()setclipboard("https://discord.gg/bd4CEkE3eU")end})
+
+
 
 
 local cam = workspace.CurrentCamera
